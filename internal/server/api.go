@@ -42,7 +42,7 @@ func Censor(cfg *config.Config) http.HandlerFunc {
 		log.Debug("request body decoded")
 
 		if isOffensive(req.Content, cfg.CensorList) {
-			log.Info("comment contains offensive words", logger.Err(err))
+			log.Info("comment contains offensive words")
 			http.Error(w, "", http.StatusBadRequest)
 			return
 		}
