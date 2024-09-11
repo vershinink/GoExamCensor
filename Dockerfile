@@ -18,6 +18,8 @@ WORKDIR /root
 
 RUN mkdir -p /root/config
 
+ENV CENSOR_CONFIG_PATH=./config/config.yaml
+
 COPY --from=builder /go/src/censor/config ./config
 
 COPY --from=builder /go/src/censor/censor .
