@@ -50,7 +50,6 @@ func Censor(cfg *config.Config) http.HandlerFunc {
 
 		w.WriteHeader(http.StatusOK)
 		log.Info("request served successfuly")
-		log = nil
 	}
 }
 
